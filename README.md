@@ -1,3 +1,4 @@
+
 # Anonymized Code for Deepfake Detection (Revision)
 
 This repository is anonymized for double-blind review.
@@ -15,3 +16,6 @@ python swin_trans.py
 ## Notes
 - Datasets are NOT included due to license restrictions.
 - Please download datasets from official sources and modify the data paths in scripts if needed.
+
+# Finetune-Is-All-You-Need-DeepFake-Detection-via-LLM-and-Neural-Network-Fine-Tuning
+
