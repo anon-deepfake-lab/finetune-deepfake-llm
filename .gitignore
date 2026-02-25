@@ -1,0 +1,14 @@
+data/
+dataset/
+datasets/
+checkpoints/
+weights/
+*.pth
+*.pt
+*.ckpt
+logs/
+runs/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

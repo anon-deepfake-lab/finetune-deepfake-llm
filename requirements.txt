@@ -1,0 +1,10 @@
+torch
+torchvision
+numpy
+opencv-python
+tqdm
+scikit-learn
+pillow
+transformers
+peft
+accelerate
