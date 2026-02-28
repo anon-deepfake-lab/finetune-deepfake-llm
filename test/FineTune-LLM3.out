@@ -3,16 +3,18 @@ Train samples: 142276
 Validation samples: 10500
 Test samples: 40000
 Loading VGG model...
-/usr/local/python3.9/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-  warnings.warn(
-/usr/local/python3.9/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
-  warnings.warn(msg)
+
 Loading ViT model...
 2025-08-12 00:00:07,652 - modelscope - INFO - Intra-cloud acceleration enabled for downloading from google/vit-base-patch16-224-in21k
 Downloading Model from https://www.modelscope.cn to directory: /root/.cache/modelscope/hub/models/google/vit-base-patch16-224-in21k
 Combined feature dimension: 4864
 Initializing LLM classifier...
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.33it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.33it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.17it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.56it/s]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.33it/s]
+Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.33it/s]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.17it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.56it/s]
 trainable params: 7,667,712 || all params: 7,574,963,200 || trainable%: 0.1012
 Start training...
 
@@ -1813,19 +1815,4 @@ Epoch 2 Summary:
 Train Loss: 0.0401 | Train Acc: 0.9780
 Val Loss: 0.0451 | Val Acc: 0.9884
 Current LR: 0.000096
-Traceback (most recent call last):
-  File "/root/LLM/FineTune-LLM.py", line 495, in <module>
-    main()
-  File "/root/LLM/FineTune-LLM.py", line 478, in main
-    classifier = train_model(
-  File "/root/LLM/FineTune-LLM.py", line 405, in train_model
-    plt.plot([i for i, val in enumerate(val_acc_history) if val == max(val_acc_history[:i+1])][1:], 
-  File "/usr/local/python3.9/lib/python3.9/site-packages/matplotlib/pyplot.py", line 3794, in plot
-    return gca().plot(
-  File "/usr/local/python3.9/lib/python3.9/site-packages/matplotlib/axes/_axes.py", line 1779, in plot
-    lines = [*self._get_lines(self, *args, data=data, **kwargs)]
-  File "/usr/local/python3.9/lib/python3.9/site-packages/matplotlib/axes/_base.py", line 296, in __call__
-    yield from self._plot_args(
-  File "/usr/local/python3.9/lib/python3.9/site-packages/matplotlib/axes/_base.py", line 486, in _plot_args
-    raise ValueError(f"x and y must have same first dimension, but "
-ValueError: x and y must have same first dimension, but have shapes (0,) and (1,)
+
